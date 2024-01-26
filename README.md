@@ -2,7 +2,7 @@
 
 Graphical representation of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm) for path finding.
 
-**Graphical version simple explanation**
+**Graphical version simple explanation**<br>
 Whole idea behind it is grid of boxes (created class) with specific attributes
 
 ## Basic controls
