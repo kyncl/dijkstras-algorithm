@@ -230,7 +230,7 @@ def Main():
                 searching = dijkstraAlgorithm(targetBox)
 
             elif searching == False:
-                print(f"{testNumber}) Time: {time.time() - start}s RAM Used: {tracemalloc.get_traced_memory()}Kib")
+                print(f"{testNumber}) Time: {time.time() - start}s RAM Used: {tracemalloc.get_traced_memory()}KiB")
                 tracemalloc.stop()
 
                 # The output is given in form of (current, peak),i.e, current memory is the memory the code is currently
