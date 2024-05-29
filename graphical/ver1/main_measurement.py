@@ -111,7 +111,11 @@ def placePoint(grid, isWall=True, specificBox=None):
                     specificBox.end = True
                     return specificBox
 
-
+def averageOfList(list):
+    sum = 0
+    for x in list:
+        sum += x
+    return sum/len(list)
 def Main():
     global grid
     global queue
@@ -132,6 +136,7 @@ def Main():
     gameLoop = True
 
     start = 0
+    currentRamUsedList = []
 
     while gameLoop == True:
         for event in pygame.event.get():
@@ -228,9 +233,11 @@ def Main():
                     tracemalloc.start()
                     testNumber += 1
                 searching = dijkstraAlgorithm(targetBox)
+                currentRamUsed, maximumRamUsed = tracemalloc.get_traced_memory()
+                currentRamUsedList.append(currentRamUsed)
 
             elif searching == False:
-                print(f"{testNumber}) Time: {time.time() - start}s RAM Used: {tracemalloc.get_traced_memory()}KiB")
+                print(f"{testNumber}) Time: {time.time() - start}s RAM Used: {averageOfList(currentRamUsedList)}Kib")
                 tracemalloc.stop()
 
                 # The output is given in form of (current, peak),i.e, current memory is the memory the code is currently
