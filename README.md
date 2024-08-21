@@ -46,6 +46,3 @@ Note: you will need also their requirements
   <li>Better GUI</li>
   <li>Terminal version</li>
 </ul>
-
-### Disclaimer
-  this repository implements some part of this [video tutorial](https://www.youtube.com/watch?v=QNpUN8gBeLY)
